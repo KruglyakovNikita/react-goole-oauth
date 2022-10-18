@@ -2,6 +2,8 @@ import React, { useEffect } from 'react';
 import './App.css';
 import jwt_decode from 'jwt-decode';
 import { useState } from 'react';
+import * as dotenv from 'dotenv';
+dotenv.config();
 
 function App() {
   const [user, setUser] = useState({});
@@ -20,7 +22,7 @@ function App() {
   useEffect(() => {
     /*global google*/
     google.accounts.id.initialize({
-      client_id: '132370882321-gk7j93jaan79shpfso9nmjt9udg252nr.apps.googleusercontent.com',
+      client_id: `!!!!!!!!!!!!!!!!!!!!Your google client_id code!!!!!!!!!!!!!!!!!!!!`,
       callback: handleCallbackResponse,
     });
     google.accounts.id.renderButton(document.getElementById('signInDiv'), { theme: 'outline', size: 'large' });
